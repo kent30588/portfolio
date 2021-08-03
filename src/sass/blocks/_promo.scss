@@ -12,18 +12,45 @@
         z-index: 2;
         padding-left: 10px;
         @include before_circle;
+		  &:hover{
+			  @include before_circle_hover;
+		  }
     }
     &__btns {
         margin-top: 25px;
-        width: 250px;
+        width: 300px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+		  position: relative;
     }
     &__link {
         color: #000;
         font-weight: bold;
+		  padding: 12px 0;
+		  width: 135px;
+		  height: 45px;
+		  text-align: center;
+			transition: all 0.6s;
         &:hover {
+				background: linear-gradient(to top, #fce25b, #ecc92b);
+				box-shadow: -1px -0px rgb(214, 139, 0),
+				-1px -1px rgb(219, 143, 0),
+				-2px -1px rgb(213, 138, 0),
+				-2px -2px rgb(218, 142, 0),
+				-3px -2px rgb(212, 137, 0),
+				-3px -3px rgb(217, 141, 0),
+				-4px -3px rgb(211, 136, 0),
+				-4px -4px rgb(216, 140, 0),
+				-5px -4px rgb(210, 135, 0),
+				-5px -5px rgb(215, 139, 0),
+				-6px -5px rgb(209, 134, 0),
+				-6px -6px rgb(214, 138, 0),
+				-7px -6px rgb(208, 133, 0),
+				-7px -7px rgb(213, 137, 0),
+				-8px -7px rgb(207, 132, 0),
+				-8px -8px rgb(212, 136, 0);
+				border-radius: 2px;
             text-decoration: none;
             color: #000;
         }

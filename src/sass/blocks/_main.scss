@@ -1,0 +1,55 @@
+.main{
+	padding-top: 120px;
+	&__wrapper{
+		display: flex;
+	}
+	&__foto{
+		margin-right: 70px;
+		img{
+			width: 400px;
+		}
+	}
+
+	&__title{
+		margin-bottom: 24px;
+		padding-bottom: 4px;
+		position: relative;
+		@include line_under;
+		&:hover{
+			@include line_under_hover;
+		}
+
+	}
+	&__text{
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 500;
+		margin-bottom: 40px;
+	}
+	&__know{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 50px;
+		row-gap: 20px;
+	}
+	&__card{
+		display: flex;
+	}
+	&__card-img{
+		padding: 18px 0 0 15px;
+		margin-right: 20px;
+		position: relative;
+		z-index: 2;
+		@include before_icon;
+			&:hover {
+				@include before_icon_hover;
+			}
+	}
+	&__card-title{
+		margin-bottom: 6px;
+	}
+	&__card-text{
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
