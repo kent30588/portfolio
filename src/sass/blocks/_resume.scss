@@ -1,17 +1,5 @@
 .resume {
     padding: 120px 0 0 0;
-    &__title {
-        text-align: center;
-        padding: 0;
-        @include before_circle;
-        &:before {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    &__subtitle {
-        text-align: center;
-    }
     &__wrapper {
         padding: 60px 65px 0 65px;
         display: grid;
@@ -40,18 +28,60 @@
                 position: relative;
                 &::after {
                     content: '';
+                    width: 1px;
+                    height: calc(100% + 16px);
                     position: absolute;
                     top: -16px;
-                    width: 1px;
-                    height: 100%;
                     background-color: #000;
                 }
             }
         }
     }
-    &__item {}
-    &__item-head {}
-    &__item-icon {}
-    &__item-location {}
-    &__item-body {}
+    &__item {
+		 position: relative;
+		 &::before {
+		 	content: '';
+		 	position: absolute;
+		 	top: 63px;
+		 	left: 0;
+		 	width: 45px;
+		 	height: 1px;
+		 	background-color: #000;
+		 }
+	 }
+    &__item-head {
+		 position: relative;
+		 padding: 45px 0 0 100px;
+		 h4{
+			 margin-bottom: 0;
+		 }
+	 }
+    &__item-icon {
+		position: absolute;
+		top: 59px;
+		left: 45px;
+		padding: 18px 0 0 15px;
+		@include before_icon;
+		&::before{
+			top:-14px;
+		}
+		&:hover{
+			@include before_icon_hover;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 17px;
+		}
+	 }
+    &__item-location {
+		 font-size: 12px;
+		 line-height: 18px;
+		 margin-top: 2px;
+	 }
+    &__item-body {
+		 padding: 12px 0 0 50px;
+		 font-size: 12px;
+		 line-height: 18px;
+	 }
 }

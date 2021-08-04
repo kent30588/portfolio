@@ -28,4 +28,18 @@
         margin-top: 6px;
         @include before_circle;
     }
+	 &__section-title{
+		 		position: relative;
+		 		text-align: center;
+				 padding: 0;
+		 		@include before_circle;
+
+		 		&:before {
+		 			left: 50%;
+		 			transform: translateX(-50%);
+	 }
+	}
+	 &__section-subtitle{
+		 text-align: center;
+	 }
 }

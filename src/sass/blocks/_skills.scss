@@ -1,0 +1,71 @@
+.skills{
+	padding: 120px 0 0 0;
+	&__items{
+		margin-top: 60px;
+		display: grid;
+		grid-template-columns: repeat(4, 270px);
+		grid-auto-rows: minmax(270px, auto);
+		gap: 13px;
+	}
+	&__item{
+		width: 270px;
+		height: 270px;
+		padding: 30px;
+		border: 1px solid #000;
+	}
+	&__item-img{
+		display: flex;
+		align-items: center;
+		min-height: 65px;
+	}
+	&__item-title{
+		margin-top: 20px;
+	}
+	&__item-text{
+		margin-top: 15px;
+		font-size: 12px;
+		line-height: 18px;
+	}
+	&__ratings{
+		margin-top: 128px;
+		display: grid;
+		grid-template-columns: repeat(3, 350px);
+		grid-auto-rows: minmax(70px, auto);
+		column-gap:45px;
+		row-gap: 30px;
+	}
+	&__rating-item{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__rating-wrapper{
+		margin-top: 8px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__ratings-title{
+		padding: 0 0 0 13px;
+		margin-bottom: 0;
+		position: relative;
+		@include before_circle;
+		&::before{
+			    top: 50%;
+			    transform: translateY(-50%);
+		}
+
+	}
+	&__rating-line{
+		width: 100%;
+		height: 14px;
+		background: #E8E4DE;
+		border-radius: 4px;
+		span{
+			display: block;
+			height: 14px;
+			background-color: $main-color;
+			border-radius: 4px;
+		}
+	}
+}
