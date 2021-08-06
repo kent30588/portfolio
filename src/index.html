@@ -269,10 +269,17 @@
       <div class="container">
         <div class="main__wrapper">
           <div class="main__foto">
-            <img src="img/main_photo.jpg" alt="my foto" />
+            <picture>
+              <source
+                media="(max-width: 576px)"
+                srcset="img/main_photo-min.jpg"
+              />
+              <source media="(min-width: 577px)" srcset="img/main_photo.jpg" />
+              <img src="img/main_photo.jpg" alt="" />
+            </picture>
           </div>
           <div class="main__history">
-            <h2 class="title__circle">Про меня</h2>
+            <h2 class="title__circle main__title-title">Про меня</h2>
             <div class="main__title title">
               Меня зовут Александр
               <div class="divider"></div>
@@ -430,7 +437,6 @@
         </div>
       </div>
     </section>
-    <!-- main -->
     <section class="resume">
       <div class="container">
         <h2
@@ -439,7 +445,9 @@
         >
           Опыт
         </h2>
-        <div class="title title__section-subtitle">Чем я буду полезен</div>
+        <div class="title title__fz36 title__section-subtitle">
+          Чем я буду полезен
+        </div>
         <div class="divider"></div>
         <div class="resume__wrapper">
           <div class="resume__column">
@@ -543,11 +551,10 @@
         </div>
       </div>
     </section>
-    <!-- resume -->
     <section class="skills">
       <div class="container">
         <h2 class="title title__fz16 title__section-title">Навыки</h2>
-        <div class="title title__section-subtitle">
+        <div class="title title__fz36 title__section-subtitle">
           Что я использую в работе
         </div>
         <div class="divider"></div>
@@ -698,7 +705,6 @@
         </div>
       </div>
     </section>
-    <!-- /.skills -->
     <section class="portfolio">
       <div class="container">
         <h2 class="title title__fz16 title__section-title">Портфолио</h2>
@@ -743,7 +749,6 @@
         </div>
       </div>
     </section>
-    <!-- /.portfolio -->
     <section class="price">
       <div class="container">
         <h2 class="title title__fz16 title__section-title">Прайс-лист</h2>
@@ -800,7 +805,6 @@
         </div>
       </div>
     </section>
-    <!-- /.price -->
     <section class="contacts">
       <div class="container">
         <div class="contacts__wrapper">
@@ -905,7 +909,6 @@
         </div>
       </div>
     </section>
-    <!-- /.contacts -->
     <script src="js/script.js"></script>
   </body>
 </html>
