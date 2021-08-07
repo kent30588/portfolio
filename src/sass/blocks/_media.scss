@@ -27,13 +27,32 @@
 	}
 	.skills{
 		&__items{
-			grid-template-columns: repeat(3, 270px);
-			justify-content: center;
+			grid-template-columns: repeat(auto-fit, 270px);
 		}
 		&__ratings{
-			grid-template-columns: repeat(3, 300px);
+			grid-template-columns: repeat(auto-fit, 300px);
 			column-gap:20px;
-			justify-content: center;
+		}
+	}
+	.portfolio{
+		&__wrapper{
+			grid-template-columns: repeat(auto-fit, 280px);
+			grid-auto-rows: 280px;
+			gap: 20px;
+			.horizonal, .vertical{
+				grid-row: unset;
+				grid-column: unset;
+			}			
+		}
+	}
+	.contacts{
+		&__wrapper{
+			padding: 0;
+			grid-template-columns: 400px 530px;
+			column-gap: 20px;
+		}
+		&__form{
+			grid-template-columns: repeat(2, 260px);
 		}
 	}
 }
@@ -91,11 +110,38 @@
 		padding-top: 60px;
 		&__items{
 			margin-top: 20px;
-			grid-template-columns: repeat(2, 270px);
 		}
 		&__ratings{
 			margin-top: 40px;
-			grid-template-columns: repeat(2, 300px);
+		}
+	}
+	.price{
+		&__items{
+			padding: 0;
+			grid-template-columns: repeat(auto-fit, 370px);
+			justify-content: center;
+			row-gap: 33px;
+		}
+	}
+	.contacts {
+		&__title{
+			width: 100px;
+			margin: 0 auto;
+		}
+		&__subtitle{
+			text-align: center;
+		}
+		.divider{
+			margin: 0 auto;
+		}
+		&__foto{
+			display: none;
+		}
+		&__wrapper {
+			grid-template-columns: 1fr;
+		}
+		&__form {
+			grid-template-columns: repeat(2, auto);
 		}
 	}
 }
@@ -149,9 +195,22 @@
 			height: 250px;
 		}
 	}
-	.skills{
-		&__ratings{
-			grid-template-columns: repeat(2, 260px);
+	.portfolio{
+		padding-top: 40px;
+	}
+	.price{
+		padding-top: 40px;
+		&__items{
+			margin-top: 20px;
+		}
+	}
+	.contacts {
+		&__wrapper {
+			grid-template-columns: 1fr;
+		}
+
+		&__form {
+			column-gap: 20px;
 		}
 	}
 }
@@ -210,13 +269,33 @@
 	}
 	.skills{
 		&__items{
-			grid-template-columns: 270px;
 			row-gap: 20px;
 		}
 		&__ratings{
-			grid-template-columns: 300px;
 			row-gap: 40px;
 		}
 	}
-
+	.price{
+		&__items{
+			grid-template-columns: repeat(auto-fit, 295px);
+		}
+	}
+	.contacts {
+		&__form {
+			display: block;
+		}
+		&__input{
+			position: relative;
+			height: 45px;
+			margin-bottom: 20px;
+		}
+		&__triggers {
+			display: block;
+		}
+		&__btn{
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+	}	
 }

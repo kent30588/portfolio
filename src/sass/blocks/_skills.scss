@@ -6,12 +6,16 @@
 		grid-template-columns: repeat(4, 270px);
 		grid-auto-rows: minmax(270px, auto);
 		gap: 13px;
+		justify-content: center;
 	}
 	&__item{
 		width: 270px;
 		height: 270px;
 		padding: 30px;
-		border: 1px solid #000;
+		border-radius: 16px;
+		background: #ffcd70;
+		box-shadow: 12px 12px 24px #d1a85c,
+		-12px -12px 24px #fff284;
 	}
 	&__item-img{
 		display: flex;
@@ -33,6 +37,7 @@
 		grid-auto-rows: minmax(70px, auto);
 		column-gap:45px;
 		row-gap: 30px;
+		justify-content: center;
 	}
 	&__rating-item{
 		display: flex;
@@ -59,7 +64,7 @@
 	&__rating-line{
 		width: 100%;
 		height: 14px;
-		background: #E8E4DE;
+		background: #ffedcc;
 		border-radius: 4px;
 		span{
 			display: block;
